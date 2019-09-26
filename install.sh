@@ -79,7 +79,7 @@ function compile_vim_on_centos()
         perl perl-devel perl-ExtUtils-ParseXS \
         perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
         perl-ExtUtils-Embed libX11-devel ncurses-devel
-    
+
     git clone https://github.com/vim/vim.git ~/vim
     cd ~/vim
     ./configure --with-features=huge \
@@ -201,9 +201,9 @@ function compile_ycm_on_mac_mojave()
 {
     echo "Installing macOS_10.14 sdk headers..."
     xcode-select --install
-    open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+    # open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
     cd ~/.vim/plugged/YouCompleteMe
-    ./install.py --clang-completer
+    ./install.py --clang-completer --go-completer --js-completer --ts-completer
 }
 
 # 在MacOS上编译ycm
@@ -302,7 +302,7 @@ function main()
     type=`get_platform_type`
     echo "Platform type: "${type}
 
-    if [ ${type} == "Darwin" ]; then 
+    if [ ${type} == "Darwin" ]; then
         install_vimplus_on_mac
     elif [ ${type} == "Linux" ]; then
         install_vimplus_on_linux
