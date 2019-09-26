@@ -1,65 +1,78 @@
-![][1]
+![vimplus-logo][1]
 
 An automatic configuration program for vim
 ===============================================
 
-![][2]
+<p align="center">
+    <a href="#build" alt="build"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" /></a>
+    <a href="#安装" alt="platform"><img src="https://img.shields.io/badge/platform-MacOSX%20%7C%20Linux%2064bit-brightgreen.svg" /></a>
+    <a href="https://github.com/chxuan/vimplus/stargazers" alt="stars"><img src="https://img.shields.io/github/stars/chxuan/vimplus.svg?style=popout&label=stars" /></a>
+    <a href="https://github.com/chxuan/vimplus/forks" alt="forks"><img src="https://img.shields.io/github/forks/chxuan/vimplus.svg?style=popout&label=forks" /></a>
+    <a href="https://github.com/chxuan/vimplus/graphs/contributors" alt="contributors"><img src="https://img.shields.io/github/contributors/chxuan/vimplus" /></a>
+    <a href="https://github.com/chxuan/vimplus/blob/master/LICENSE" alt="lincense"><img src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
+</p>
+
+![main][2]
 
 ## 安装
 
 ### Mac OS X
 
-- 安装[HomeBrew][3]
+#### 安装[HomeBrew][3]
  
-    ```bash
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    ```
 
-- 安装vimplus
+#### 安装vimplus
 
-    ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
     ./install.sh
-    ```
+    
+#### 设置Nerd Font
 
-### Ubuntu
+为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`。
 
-- 版本要求
+### Linux 64-bit
 
-    `ubuntu16.04`及其以上系统。
+#### 支持以下发行版
 
-- 安装vimplus(建议在普通用户下安装)
+<table>
+<tr>
+<td><a href="https://distrowatch.com/table.php?distribution=ubuntu"><img src="https://distrowatch.com/images/yvzhuwbpy/ubuntu.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=ubuntukylin"><img src="https://distrowatch.com/images/yvzhuwbpy/ubuntukylin.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=debian"><img src="https://distrowatch.com/images/yvzhuwbpy/debian.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=kali"><img src="https://distrowatch.com/images/yvzhuwbpy/kali.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=deepin"><img src="https://distrowatch.com/images/yvzhuwbpy/deepin.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=mint"><img src="https://distrowatch.com/images/yvzhuwbpy/mint.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=elementary"><img src="https://distrowatch.com/images/yvzhuwbpy/elementary.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=centos"><img src="https://distrowatch.com/images/yvzhuwbpy/centos.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=fedora"><img src="https://distrowatch.com/images/yvzhuwbpy/fedora.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=arch"><img src="https://distrowatch.com/images/yvzhuwbpy/arch.png"/></a><p align="center"></p></td>
+</tr>
+<tr>
+<td><a href="https://distrowatch.com/table.php?distribution=manjaro"><img src="https://distrowatch.com/images/yvzhuwbpy/manjaro.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=opensuse"><img src="https://distrowatch.com/images/yvzhuwbpy/opensuse.png"/></a><p align="center"></p></td>
+</tr>
+</table>
 
-    ```bash
+
+#### 安装vimplus
+
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
-    ./install.sh
-    ```
+    ./install.sh //不加sudo
+    
+#### 设置Nerd Font
 
-### Centos
+为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`。
 
-- 版本要求
 
-    `centos7`及其以上系统。
+#### 多用户支持
 
-- 安装vimplus(建议在普通用户下安装)
+将vimplus在某个用户下安装好后，若需要在其他用户也能够使用vimplus，则执行
 
-    ```bash
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
-    cd ~/.vimplus
-    ./install.sh
-    ```
-
-### ArchLinux
-
-- 安装vimplus
-
-    ```bash
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
-    cd ~/.vimplus
-    ./install.sh
-    ```
+    sudo ./install_to_user.sh username1 username2 //替换为真实用户名
+    
 
 ## 个性化
 
@@ -101,12 +114,11 @@ An automatic configuration program for vim
 | [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                                 |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                                   |
 | [clever-f.vim][68]                  | 强化f和F键                                                                     |
-| [github-complete.vim][69]           | Emoji:dog:补全                                                                 |
 
 
 ## 快捷键
 
-以下是部分快捷键，更详细的快捷键请查阅[vimplus帮助文档][59]。
+以下是部分快捷键，可通过vimplus的`,h`命令查看[vimplus帮助文档][59]。
 
 | 快捷键       | 说明                                 |
 | -------      | -----                                |
@@ -116,6 +128,7 @@ An automatic configuration program for vim
 | `<leader>a`  | .h .cpp 文件切换                     |
 | `<leader>u`  | 转到函数声明                         |
 | `<leader>U`  | 转到函数实现                         |
+| `<leader>u`  | 转到变量声明                         |
 | `<leader>o`  | 打开include文件                      |
 | `<leader>y`  | 拷贝函数声明                         |
 | `<leader>p`  | 生成函数实现                         |
@@ -157,6 +170,22 @@ An automatic configuration program for vim
 
 ## Q & A
 
+- **`vimplus安装脚本会在自己电脑上安装哪些软件？`**
+
+    网络良好情况下，vimplus只需30分钟左右即可将vim cpp环境配置好，vimplus真正的做到了一键配置，不让用户操心。vimplus会安装一些必备软件，比如说python、cmake、gcc、fontconfig等，vimplus也考虑到了有些系统的vim不支持python，它会自动去下载vim源码将python支持编译进去，vimplus也会安装nerd-font不让vim显示出现乱码，最最重要的是vimplus实现了ycm自动编译安装，给折腾了几天ycm都没有安装好的用户带来了新的希望，而且vimplus也支持macos和linux众多发行版，让linux发烧友频繁切换发行版而不用操心vim环境配置。最后说了这么多，不如看[vimplus安装脚本][78]来的直接:smile:。
+
+- **`插件安装界面显示YouCompleteMe安装失败`**
+
+    在执行install.sh安装脚本时，ycm比其他插件早安装，当用户看到插件安装界面显示ycm安装失败时，其实ycm已经提前安装好了，忽略掉该错误即可。
+
+- **`插件安装界面不更新进度，一直显示进度Installing plugins (24/40)`**
+
+    vimplus使用vim-plug作为插件管理器，vim-plug可能由于界面没有刷新（其实在安装），所以进度一直停留在`Installing plugins (24/40)`，用户只需要耐心等待所有插件安装完成即可，或者直接`Ctrl+C`终止安装，通过vim打开`~/.vimrc`并执行`:PlugInstall`命令安装剩余插件。
+
+- **`vimplus不支持目前用户正在使用的系统怎么办？`**
+
+    可以给作者提[Issues][39]，或者自己fork vimplus来修改，并提交pr，贡献自己的一份力量。
+
 - **`安装vimplus后Airline等插件有乱码，怎么解决？`**
 
     linux和mac系统需设置终端字体为`Droid Sans Mono Nerd Font`。
@@ -165,33 +194,36 @@ An automatic configuration program for vim
 
     windows系统安装[Nerd Font][51]字体后并更改xshell字体即可。
 
-- **`安装vimplus会经常失败，安装了几次都不成功！！！`**
+- **`ubuntu18.04安装了nerd font但通过终端属性并没有看到该字体。`**
 
-    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][37]文件，下载后解压到~/.vim/plugged/目录，并进入YouCompleteMe目录，linux用户执行`./install.py --clang-completer`，mac用户执行`./install.py --clang-completer --system-libclang`即可安装。
+    可以试试dconf-editor软件来设置，可以参考[这里][76]。
 
 - **`使用第三方库时怎么让ycm补全第三方库API？`**
 
     vimplus安装完毕之后，`~`目录下将会生成两个隐藏文件分别是.vimrc和.ycm_extra_conf.py，其中.vimrc是vim的配置文件，.ycm_extra_conf.py是ycm插件的配置文件，当你需要创建一个project时，需要将.ycm_extra_conf.py拷贝到project的顶层目录，通过修改该配置文件里面的`flags`变量来添加你的第三方库路径。
 
-- **`安装vimplus完成后ycm不能够工作！！！`**
+- **`怎么自定义文件头，比如说添加作者、创建时间？`**
 
-    这里的原因可能就有很多了，可能每个人遇到的问题不一样，但`vimplus`尽最大努力不让用户操心，需要注意的是ycm插件只支持`64`位的系统，更多信息请访问[ycm官网][38]。
+    你可以修改[chxuan/prepare-code][67]插件来达到目的，可以参考[这里][77]。
 
-- **`在aaa用户下安装了vimplus，在bbb用户下不能使用？`**
+- **`安装vimplus在“[ 95%] Building CXX object ycm/CMakeFiles/ycm_core.dir/ycm_core.cpp.o”等进度时出现编译报错`**
 
-    目前vimplus是基于用户的，如果你想在其他用户下也能使用vimplus，也需要单独安装。
-
-- **`在Archlinux环境下不能使用ycm怎么办？(缺少libtinfo.so.5)`**
-
-    在Archlinux下可以试着使用pkgfile命令搜索依赖的文件具体在什么包内，目前找到的包含libtinfo.so.5的包是ncurses5-compat-libs(AUR)或者32位的lib32-ncurses5-compat-libs(AUR)，安装后即可正常使用。
+    编译ycm需要消耗较大内存，建议内存大于1G，实在不行也可以开启linux swap分区。
 
 - **`以上没有我遇到的问题怎么办？`**
 
-    您可以通过上网找解决方法，或提[Issues][39]，也可以通过发邮件方式`787280310@qq.com`一起讨论解决方法。
+    您可以通过上网找解决方法，或提[Issues][39]，也可以通过加QQ`787280310`、发邮件方式`787280310@qq.com`一起讨论解决方法。
 
 - **`vimplus用起来真的太棒了，怎么办？`**
 
     那就麻烦您打赏一颗:star::star:吧，给予我继续维护的动力。
+
+
+## 支持开源:heart:
+
+| wechat                                                                                                     | alipay                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/wechat.png" height="150" width="150" /></a> | <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/alipay.png" height="150" width="150" /></a> |
 
 
 ## 贡献者
@@ -206,11 +238,13 @@ An automatic configuration program for vim
 </tr>
 <tr>
 <td width="20%"><a href="https://github.com/Shaloc"><img src="https://avatars2.githubusercontent.com/u/24523674?s=400&v=4"/></a><p align="center">Shaloc</p></td>
+<td width="20%"><a href="https://github.com/jokerkeny"><img src="https://avatars2.githubusercontent.com/u/10593391?s=400&v=4"/></a><p align="center">jokerkeny</p></td>
+<td width="20%"><a href="https://github.com/xuthus5"><img src="https://avatars0.githubusercontent.com/u/22839236?s=400&v=4"/></a><p align="center">xuthus5</p></td>
 </tr>
 </table>
 
 
-## vimplus star趋势图
+## vimplus:star:趋势图
 
 [![Sparkline](https://stars.medv.io/chxuan/vimplus.svg)](https://stars.medv.io/chxuan/vimplus)
 
@@ -244,7 +278,6 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [26]: https://github.com/iamcco/markdown-preview.vim
   [27]: https://github.com/chxuan/change-colorscheme
   [36]: https://github.com/tpope/vim-fugitive
-  [37]: https://pan.baidu.com/s/1-Z_U-eKbkMQqmI03qTzmFw
   [38]: https://github.com/Valloric/YouCompleteMe
   [39]: https://github.com/chxuan/vimplus/issues
   [50]: https://github.com/junegunn/vim-slash
@@ -259,12 +292,14 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [60]: https://github.com/terryma/vim-smooth-scroll
   [62]: https://github.com/mileszs/ack.vim
   [64]: https://github.com/junegunn/gv.vim
-  [65]: https://raw.githubusercontent.com/terryma/vim-multiple-cursors/master/assets/example1.gif
   [66]: https://github.com/chxuan/vimplus-startify
   [67]: https://github.com/chxuan/prepare-code
   [68]: https://github.com/rhysd/clever-f.vim
-  [69]: https://github.com/rhysd/github-complete.vim
   [70]: https://github.com/chxuan/vim-buffer
   [72]: https://github.com/chxuan/vim-edit
   [74]: https://github.com/chxuan/tagbar
   [75]: https://github.com/chxuan/vimplus/blob/master/LICENSE
+  [76]: https://blog.csdn.net/wang73ying/article/details/82491993
+  [77]: https://blog.csdn.net/liuyangbo121/article/details/82971736
+  [78]: https://github.com/chxuan/vimplus/blob/master/install.sh
+
